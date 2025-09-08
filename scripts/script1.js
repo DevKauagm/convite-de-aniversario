@@ -8,6 +8,7 @@ img1.addEventListener('click', mudar1)
 img2.addEventListener('click', mudar2)
 img3.addEventListener('click', mudar3)
 fotos.addEventListener('click', mostrar_fotos)
+document.querySelector("input[type='button']").addEventListener('click', som_stitch)
 
 function mostrar_fotos() {
     count++
@@ -33,4 +34,8 @@ function mudar2() {
 
 function mudar3() {
     img.src = 'imagens/Icaro3.jpg'
+}
+
+function som_stitch() {
+    new Audio('audio/stitch-sound.mp3').play()
 }
