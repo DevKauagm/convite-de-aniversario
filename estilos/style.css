@@ -42,7 +42,7 @@
 
 body {
     display: grid;
-    grid-template: 80px 50px 50px 1200px 50px 30px  / 2fr 6fr 2fr;
+    grid-template: 80px 50px 50px 1300px 50px 30px  / 2fr 6fr 2fr;
     place-items: center center;
     background-image: linear-gradient(to top, var(--cor2), var(--cor5));
     background-attachment: fixed;
@@ -69,6 +69,7 @@ nav {
     width: 100%;
     height: 100%;
     color: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.452);
     font-family: "Geo", sans-serif;
 }
 
@@ -86,12 +87,12 @@ nav > ul {
 
 nav > ul > li {
     display: inline-block;
-    padding: 5px;
+    padding: 5px 20px;
 }
 
 li#img1, li#img2, li#img3 {
     display: none;
-    margin-left: 20px;
+    margin-left: 15px;
     background-color: var(--cor1);
     border-radius: 10px;
 }
@@ -104,6 +105,7 @@ main {
     padding-top: 20px;
     border-radius: 10px;
     text-align: center;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.452);
     font-family: "Playwrite US Modern", cursive;
 }
 
