@@ -8,53 +8,34 @@
     --cor5: #232D3F;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Modern:wght@100..400&display=swap');
 
 @keyframes cor {
     0% {
         color: var(--cor1);
+        transform: scale(1);
     }
 
     25% {
         color: var(--cor2);
-        transform: rotate(5deg);
         transform: scale(1.1);
     }
 
     50% {
         color: var(--cor3);
-        transform: rotate(-5deg);
+        transform: scale(1.2);
     }
 
     75% {
         color: var(--cor4);
-        transform: rotate(5deg);
+        transform: scale(1.3);
     }
 
     100% {
         color: var(--cor5);
-        transform: rotate(-5deg);
-        transform: scale(1.2);
-    }
-}
-
-@keyframes janela_fotos {
-    0% {
-        height: 0;
-    }
-    25% {
-        height: 25px;
-    }
-
-    50% {
-        height: 50px;
-    }
-
-    75% {
-        height: 75px;
-    }
-
-    100% {
-        height: 110px;
+        transform: scale(1.4);
     }
 }
 
@@ -65,8 +46,10 @@
 
 body {
     display: grid;
-    grid-template: 80px 30px 50px 500px 50px 30px  / 2fr 6fr 2fr;
+    grid-template: 80px 50px 50px 1000px 50px 30px  / 2fr 6fr 2fr;
     place-items: center center;
+    background-image: linear-gradient(to top, var(--cor2), var(--cor5));
+    background-attachment: fixed;
 }
 
 header {
@@ -79,42 +62,35 @@ header {
 }
 
 header > h1 {
-    padding: 10px;
+    padding: 20px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.438);
+    font-family: "Shadows Into Light", cursive;
 }
 
 nav {
     grid-area: 2 / 1 / 3 / -1;
-    background-color: var(--cor5);
-    width: 100%;
-    height: 100%;
-    color: white;
-}
-
-nav > p {
-    padding: 5px;
-}
-
-div#menu {
-    grid-area: 3 / 1 / 5 / 2;
-    width: 100%;
-    height: 100%;
-    background-color: var(--cor4);
-}
-
-div#menu > ul {
-    padding: 10px;
-    color: white;
     background-color: var(--cor3);
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: "Geo", sans-serif;
+}
+
+nav > ul {
+    display: inline-block;
+    padding: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.432);
+    cursor: pointer;
+    background-color: var(--cor2);
     border-radius: 10px;
-    margin: 10px;
+    margin: 5px;
     list-style-type: none;
     text-align: center;
 }
 
-div#menu > ul > li {
-    padding: 5px;
-    cursor: pointer;
+nav > ul > li {
+    display: inline-block;
+    margin-left: 10px;
 }
 
 li#img1, li#img2, li#img3 {
@@ -123,6 +99,13 @@ li#img1, li#img2, li#img3 {
 
 main {
     grid-area: 4 / 2 / 5 / 3;
+    background-color: var(--cor3);
+    color: white;
+    width: 100%;
+    padding-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Playwrite US Modern", cursive;
 }
 
 main > img {
@@ -132,13 +115,39 @@ main > img {
     border: 5px solid var(--cor2);
 }
 
-main > h1 {
-    text-align: center;
-    padding: 5px;
+.rgb {
     animation: cor 5s infinite;
+}
+
+main > h1 {
+    font-family: "Shadows Into Light", cursive;
+    text-align: center;
+    padding: 10px;
+}
+
+main > p > strong {
+    color: var(--cor1);
 }
 
 main > p {
     text-align: center;
-    padding: 5px;
+    padding: 10px;
+}
+
+section#container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main > section {
+    padding: 10px;
+}
+
+section#container > section > h2 {
+    text-decoration: underline;
+}
+
+section#container > section > iframe {
+    display: block;
+    margin-top: 20px;
 }
