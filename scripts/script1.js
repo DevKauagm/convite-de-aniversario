@@ -8,7 +8,7 @@ img1.addEventListener('click', mudar1)
 img2.addEventListener('click', mudar2)
 img3.addEventListener('click', mudar3)
 fotos.addEventListener('click', mostrar_fotos)
-document.querySelector("input[type='button']").addEventListener('click', som_stitch)
+document.querySelector("input[type='button']").addEventListener('click', confirmar)
 
 function mostrar_fotos() {
     count++
@@ -36,6 +36,8 @@ function mudar3() {
     img.src = 'imagens/Icaro3.jpg'
 }
 
-function som_stitch() {
+function confirmar() {
     new Audio('audio/stitch-sound.mp3').play()
+    document.querySelector('output').innerHTML = '<p>Estaremos Aguardando sua <strong>Presença</strong>!</p>'
+    document.querySelector('section#data img').style.display = 'block'
 }

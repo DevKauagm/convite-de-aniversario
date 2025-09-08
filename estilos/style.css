@@ -38,7 +38,7 @@
 
 body {
     display: grid;
-    grid-template: 100px 50px 50px 1300px 50px 30px  / 2fr 6fr 2fr;
+    grid-template: 100px 50px 50px 1fr 50px 30px  / 2fr 6fr 2fr;
     place-items: center center;
     background-image: linear-gradient(to top, var(--cor2), var(--cor5));
     background-attachment: fixed;
@@ -103,6 +103,7 @@ main {
     border-radius: 10px;
     text-align: center;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.452);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.432);
     font-family: "Playwrite US Modern", cursive;
 }
 
@@ -124,7 +125,7 @@ main > h1 {
     padding: 10px;
 }
 
-main > p > strong {
+main p > strong {
     color: var(--cor1);
 }
 
@@ -175,4 +176,23 @@ section#container > section > input{
 
 section#container > section > input:hover {
     cursor: pointer;
+}
+
+section#container > section#data > img{
+    display: none;
+}
+
+footer {
+    grid-area: -2 / 1 / -1 / -1;
+    background-color: var(--cor5);
+    width: 100%;
+    height: 100%;
+    padding: 10px 0px;
+    color: white;
+    text-align: end;
+}
+
+footer > p {
+    padding: 5px;
+    font-family: "Shadows Into Light", cursive;
 }
